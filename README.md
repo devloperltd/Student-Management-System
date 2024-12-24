@@ -5,8 +5,11 @@ is designed to record, analyze, and manage information in a school. These system
 ![2024-12-23_115235](https://github.com/user-attachments/assets/8abe16a4-ab65-4561-88c3-ad00d689a785)
 
 ## Credits :
-- !/usr/bin/env python3.13
+- !/usr/bin/env python3.13.1
 - Laroussi Boulanour (GUI, design & coding)
+- 𝗙𝗔𝗖𝗘𝗕𝗢𝗢𝗞 : [HERE](https://www.facebook.com/Laroussi.Br)
+- 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 : [HERE](https://t.me/UncleAnonymous)
+- 𝗪𝗘𝗕𝗦𝗜𝗧𝗘 : [HERE](https://laroussigsm.net/)
 
 # Features :
 
@@ -29,13 +32,13 @@ is designed to record, analyze, and manage information in a school. These system
 
 
 ## Installation :
-- Install Python >= 3.13 from the official website [HERE](https://www.python.org/)
+- Install Python >= 3.13.1 from the official website [HERE](https://www.python.org/)
 
-## Create python 3.13 venv and activated :
+## Create python 3.13.1 venv and Activated :
 
 ```sh
-python -m venv Your_env
-Your_env\Scripts\activate
+python -m venv Your_env_name
+Your_env_name\Scripts\activate
 pip3 install -r requirements.txt
 ```
 ## Import/Export Database Using MySQL Workbench :
