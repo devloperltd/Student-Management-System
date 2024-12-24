@@ -106,6 +106,52 @@ from qdialog_utils.py Set to True to enable effect, False to disable.
 ```
 Replace [animation_dialog_Window] with [slide_dialog_Window] or [slide_out_dialog_Window]
 
+## Parameters To Custom Json File :
+Adjust settings as needed. [ active ], [ duration ], [ easingCurve ]
+
+```sh
+{
+    "fade": [
+        {
+            "active": true,
+            "duration": 2000,
+            "easingCurve": "OutBack"
+        }
+    ],
+    "slide": [
+        {
+            "active": true,
+            "speed": 500,
+            "direction": "right-to-left"
+        }
+    ],
+    "bounce": [
+        {
+            "active": true,
+            "direction": "horizontal",
+            "duration": 800,
+            "easingCurve": "OutBounce"
+        }
+    ],
+    "zoom": [
+        {
+            "active": true,
+            "duration": 800,
+            "easingCurve": "OutBounce"
+        }
+    ],
+    "scale_fade": [
+        {
+            "active": true,
+            "duration": 1000,
+            "easingCurve": "OutBack"
+        }
+    ]
+}
+```
+![2024-12-23_115310](https://github.com/user-attachments/assets/92103506-899e-447c-b991-a16349f80192)
+
+
 ## MIT License :
 
 Copyright (c) [2024] [LAROUSSI BOULANOUAR]
