@@ -1,3 +1,6 @@
+# Laroussi Student Management system Project 2024
+
+
 MIT License
 
 Copyright (c) [2024] [LAROUSSI BOULANOUAR]
