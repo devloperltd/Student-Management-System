@@ -69,7 +69,7 @@ phone int
 email varchar(45) 
 address varchar(45) 
 city varchar(45) 
-photo_id
+photo_id longblob
 ```
 ### Table: registration :
 ```sh
