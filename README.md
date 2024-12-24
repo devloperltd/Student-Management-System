@@ -41,6 +41,19 @@ python -m venv Your_env_name
 Your_env_name\Scripts\activate
 pip3 install -r requirements.txt
 ```
+## Command Line Tool For Converting .qrc Files Into .py Files :
+
+```sh
+pyside6-rcc ico.qrc -o ico_rc.py
+```
+## Command Line Tool For Converting .uic Files Into .py Files :
+
+```sh
+pyside6-uic mainwindow.ui -o ui_mainwindow.py
+```
+![2024-12-24_230539](https://github.com/user-attachments/assets/f8636393-b022-44d7-812e-e7b656e0e7e2)
+
+
 ## Import/Export Database Using MySQL Workbench :
 
 - Download the latest version of MySQL Workbench from official website : [HERE](https://dev.mysql.com/downloads/workbench/)
