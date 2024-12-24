@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>login_gui</class>
+ <widget class="QMainWindow" name="login_gui">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>964</width>
+    <height>618</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	border:none;
+	background-color: transparent;
+	padding:0;
+	margin:0;
+	color: rgb(255, 255, 255);
+}
+#login_container{
+	border-image: url(:/png/icons/background.jpg) 0 0 0 0 stretch stretch;
+	border-radius:10px;
+}
+#centralwidget{}
+
+#widget{
+	background-color: rgb(23, 21, 59);
+	border-radius:20px;
+}
+QLineEdit:focus{
+    border: 1px solid #006080;
+}
+QPushButton{
+	background-color: rgb(52, 43, 124);
+	padding:10px 5px;
+	border-radius:5px;
+}
+QPushButton::pressed{
+	background-color: rgb(65, 57, 156);
+}
+#to_register, #to_login, #back_to_login, #to_forget_pass, #close_btn{
+	background-color: transparent;
+	color: rgb(81, 129, 195);
+	padding:0 5px;
+}
+#to_register::pressed{
+	color: rgb(100, 101, 175);
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QFrame" name="login_container">
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <widget class="QWidget" name="widget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>298</x>
+         <y>60</y>
+         <width>350</width>
+         <height>480</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>350</width>
+         <height>480</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>350</width>
+         <height>480</height>
+        </size>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QStackedWidget" name="stackedWidget">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="login_page">
+           <widget class="QPushButton" name="to_register">
+            <property name="geometry">
+             <rect>
+              <x>70</x>
+              <y>390</y>
+              <width>181</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>false</bold>
+              <underline>true</underline>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>Don't have account? Register</string>
+            </property>
+           </widget>
+           <widget class="QFrame" name="frame_2">
+            <property name="geometry">
+             <rect>
+              <x>30</x>
+              <y>160</y>
+              <width>271</width>
+              <height>131</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Shape::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Shadow::Raised</enum>
+            </property>
+            <widget class="QLineEdit" name="user_lineEdit">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>20</y>
+               <width>251</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Segoe UI</family>
+               <pointsize>12</pointsize>
+               <italic>false</italic>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(37, 30, 84);
+padding:5px 5px;
+border-radius:5px;
+font: 12pt &quot;Segoe UI&quot;;
+selection-background-color: rgb(175, 169, 255); 
+</string>
+             </property>
+             <property name="placeholderText">
+              <string>Username</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="pass_lineEdit">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>70</y>
+               <width>251</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(37, 30, 84);
+padding:5px 5px;
+border-radius:5px;
+font: 12pt &quot;Segoe UI&quot;;
+selection-background-color: rgb(175, 169, 255); 
+</string>
+             </property>
+             <property name="echoMode">
+              <enum>QLineEdit::EchoMode::Password</enum>
+             </property>
+             <property name="placeholderText">
+              <string>Password</string>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="hide_pass_btn">
+             <property name="geometry">
+              <rect>
+               <x>220</x>
+               <y>80</y>
+               <width>31</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: transparent;;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="../ico.qrc">
+               <normaloff>:/png/icons/hide.png</normaloff>:/png/icons/hide.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+             <property name="autoRepeat">
+              <bool>false</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>false</bool>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="show_pass_btn">
+             <property name="geometry">
+              <rect>
+               <x>220</x>
+               <y>80</y>
+               <width>31</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: transparent;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="../ico.qrc">
+               <normaloff>:/png/icons/view.png</normaloff>:/png/icons/view.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+             <property name="autoRepeat">
+              <bool>false</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>false</bool>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+            <zorder>pass_lineEdit</zorder>
+            <zorder>user_lineEdit</zorder>
+            <zorder>show_pass_btn</zorder>
+            <zorder>hide_pass_btn</zorder>
+           </widget>
+           <widget class="QCheckBox" name="remember_me">
+            <property name="geometry">
+             <rect>
+              <x>40</x>
+              <y>290</y>
+              <width>111</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(117, 112, 153);</string>
+            </property>
+            <property name="text">
+             <string>Remember Me</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="to_forget_pass">
+            <property name="geometry">
+             <rect>
+              <x>160</x>
+              <y>284</y>
+              <width>141</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <underline>true</underline>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(125, 127, 255);</string>
+            </property>
+            <property name="text">
+             <string>Forgotten password? </string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_3">
+            <property name="geometry">
+             <rect>
+              <x>70</x>
+              <y>140</y>
+              <width>191</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(117, 112, 153);</string>
+            </property>
+            <property name="text">
+             <string>Enter your information below</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="login_btn">
+            <property name="geometry">
+             <rect>
+              <x>40</x>
+              <y>340</y>
+              <width>251</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(146, 143, 170);</string>
+            </property>
+            <property name="text">
+             <string>Login</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_4">
+            <property name="geometry">
+             <rect>
+              <x>120</x>
+              <y>30</y>
+              <width>101</width>
+              <height>101</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="../ico.qrc">:/png/icons/profile.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="close_btn">
+            <property name="geometry">
+             <rect>
+              <x>307</x>
+              <y>5</y>
+              <width>16</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="../ico.qrc">
+              <normaloff>:/png/icons/cancel.png</normaloff>:/png/icons/cancel.png</iconset>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="register_page">
+           <widget class="QPushButton" name="to_login">
+            <property name="geometry">
+             <rect>
+              <x>70</x>
+              <y>410</y>
+              <width>181</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <underline>true</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string> Already registered? Login</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_2">
+            <property name="geometry">
+             <rect>
+              <x>70</x>
+              <y>90</y>
+              <width>191</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(117, 112, 153);</string>
+            </property>
+            <property name="text">
+             <string>Enter your information below</string>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="checkBox">
+            <property name="geometry">
+             <rect>
+              <x>40</x>
+              <y>324</y>
+              <width>141</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(117, 112, 153);</string>
+            </property>
+            <property name="text">
+             <string>Agree with our terms</string>
+            </property>
+           </widget>
+           <widget class="QFrame" name="frame">
+            <property name="geometry">
+             <rect>
+              <x>30</x>
+              <y>110</y>
+              <width>271</width>
+              <height>211</height>
+             </rect>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Shape::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Shadow::Raised</enum>
+            </property>
+            <widget class="QLineEdit" name="add_user_lineEdit">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>10</y>
+               <width>251</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Segoe UI</family>
+               <pointsize>12</pointsize>
+               <italic>false</italic>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(37, 30, 84);
+padding:5px 5px;
+border-radius:5px;
+font: 12pt &quot;Segoe UI&quot;;
+selection-background-color: rgb(175, 169, 255); </string>
+             </property>
+             <property name="placeholderText">
+              <string>Username</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="add_pass_lineEdit">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>60</y>
+               <width>251</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(37, 30, 84);
+padding:5px 5px;
+border-radius:5px;
+font: 12pt &quot;Segoe UI&quot;;
+selection-background-color: rgb(175, 169, 255); </string>
+             </property>
+             <property name="echoMode">
+              <enum>QLineEdit::EchoMode::Password</enum>
+             </property>
+             <property name="placeholderText">
+              <string>Password</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="confirm_pass_lineEdit">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>110</y>
+               <width>251</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(37, 30, 84);
+padding:5px 5px;
+border-radius:5px;
+font: 12pt &quot;Segoe UI&quot;;
+selection-background-color: rgb(175, 169, 255); </string>
+             </property>
+             <property name="echoMode">
+              <enum>QLineEdit::EchoMode::Password</enum>
+             </property>
+             <property name="placeholderText">
+              <string>Confirm Password</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="add_mail_lineEdit">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>160</y>
+               <width>251</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(37, 30, 84);
+padding:5px 5px;
+border-radius:5px;
+font: 12pt &quot;Segoe UI&quot;;
+selection-background-color: rgb(175, 169, 255); </string>
+             </property>
+             <property name="echoMode">
+              <enum>QLineEdit::EchoMode::Normal</enum>
+             </property>
+             <property name="placeholderText">
+              <string>XXXX@mail.com</string>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QLabel" name="label">
+            <property name="geometry">
+             <rect>
+              <x>140</x>
+              <y>20</y>
+              <width>61</width>
+              <height>61</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="../ico.qrc">:/png/icons/register.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="register_btn">
+            <property name="geometry">
+             <rect>
+              <x>40</x>
+              <y>360</y>
+              <width>251</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(146, 143, 170);</string>
+            </property>
+            <property name="text">
+             <string>Register</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="forget_page">
+           <widget class="QFrame" name="frame_3">
+            <property name="geometry">
+             <rect>
+              <x>30</x>
+              <y>120</y>
+              <width>271</width>
+              <height>211</height>
+             </rect>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Shape::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Shadow::Raised</enum>
+            </property>
+            <widget class="QLineEdit" name="reset_user_lineEdit">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>10</y>
+               <width>251</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Segoe UI</family>
+               <pointsize>12</pointsize>
+               <italic>false</italic>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(37, 30, 84);
+padding:5px 5px;
+border-radius:5px;
+font: 12pt &quot;Segoe UI&quot;;
+selection-background-color: rgb(175, 169, 255); </string>
+             </property>
+             <property name="placeholderText">
+              <string>Username</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="reset_pass_lineEdit">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>110</y>
+               <width>251</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(37, 30, 84);
+padding:5px 5px;
+border-radius:5px;
+font: 12pt &quot;Segoe UI&quot;;
+selection-background-color: rgb(175, 169, 255); </string>
+             </property>
+             <property name="echoMode">
+              <enum>QLineEdit::EchoMode::Password</enum>
+             </property>
+             <property name="placeholderText">
+              <string>New Password</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="comfirm_reset_pass">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>160</y>
+               <width>251</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(37, 30, 84);
+padding:5px 5px;
+border-radius:5px;
+font: 12pt &quot;Segoe UI&quot;;
+selection-background-color: rgb(175, 169, 255); </string>
+             </property>
+             <property name="echoMode">
+              <enum>QLineEdit::EchoMode::Password</enum>
+             </property>
+             <property name="placeholderText">
+              <string>Confirm New Password</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="reset_mail_lineEdit">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>60</y>
+               <width>251</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(37, 30, 84);
+padding:5px 5px;
+border-radius:5px;
+font: 12pt &quot;Segoe UI&quot;;
+selection-background-color: rgb(175, 169, 255); </string>
+             </property>
+             <property name="echoMode">
+              <enum>QLineEdit::EchoMode::Normal</enum>
+             </property>
+             <property name="placeholderText">
+              <string>XXXX@mail.com</string>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QPushButton" name="reset_pass_btn">
+            <property name="geometry">
+             <rect>
+              <x>40</x>
+              <y>360</y>
+              <width>251</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+color: rgb(24, 20, 57);
+background-color: rgb(21, 158, 200);</string>
+            </property>
+            <property name="text">
+             <string>Reset Password</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="back_to_login">
+            <property name="geometry">
+             <rect>
+              <x>70</x>
+              <y>410</y>
+              <width>181</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <underline>true</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string> Back to Login</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../ico.qrc">
+              <normaloff>:/png/icons/undo.png</normaloff>:/png/icons/undo.png</iconset>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_6">
+            <property name="geometry">
+             <rect>
+              <x>120</x>
+              <y>20</y>
+              <width>100</width>
+              <height>100</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="../ico.qrc">:/png/icons/password-manager.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="checkBox_3">
+            <property name="geometry">
+             <rect>
+              <x>40</x>
+              <y>330</y>
+              <width>141</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(117, 112, 153);</string>
+            </property>
+            <property name="text">
+             <string>Agree with our terms</string>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../ico.qrc"/>
+ </resources>
+ <connections/>
+</ui>

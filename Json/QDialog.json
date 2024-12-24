@@ -1,0 +1,38 @@
+{
+    "fade": [
+        {
+            "active": true,
+            "duration": 2000,
+            "easingCurve": "OutBack"
+        }
+    ],
+    "slide": [
+        {
+            "active": true,
+            "speed": 500,
+            "direction": "right-to-left"
+        }
+    ],
+    "bounce": [
+        {
+            "active": true,
+            "direction": "horizontal",
+            "duration": 800,
+            "easingCurve": "OutBounce"
+        }
+    ],
+    "zoom": [
+        {
+            "active": true,
+            "duration": 800,
+            "easingCurve": "OutBounce"
+        }
+    ],
+    "scale_fade": [
+        {
+            "active": true,
+            "duration": 1000,
+            "easingCurve": "OutBack"
+        }
+    ]
+}

@@ -1,0 +1,1177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Updatestudents_Dialog</class>
+ <widget class="QDialog" name="Updatestudents_Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>813</width>
+    <height>522</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>813</width>
+    <height>522</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>813</width>
+    <height>522</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog{
+	color: rgb(203, 192, 222);
+	background: transparent;
+}
+
+QLabel{
+	color: rgb(134, 136, 223);
+}
+QLineEdit {
+	background-color: rgb(37, 30, 84);
+	padding:5px 5px;
+	border-radius:8px;
+	font: 12pt &quot;Segoe UI&quot;;
+	selection-background-color: rgb(29, 23, 67); 
+ 	 focus {  
+ 	 background-color:rgb(192, 192, 255)};
+}
+QLineEdit:focus{
+    border: 1px solid #006080;
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QWidget" name="update_stud_nav" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget#update_stud_nav{
+	background-color: rgb(23, 21, 59);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+	border-bottom: 3px solid rgb(16, 14, 40);
+}</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QLabel" name="label_10">
+          <property name="minimumSize">
+           <size>
+            <width>25</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>25</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="../ico.qrc">:/png/icons/refresh.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="font">
+           <font>
+            <pointsize>15</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(203, 192, 222);
+background-color: transparent;</string>
+          </property>
+          <property name="text">
+           <string>Update Student Information</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>468</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QPushButton" name="minimize_btn">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+	background-color:transparent;
+	border:0;
+	padding:10px;
+}
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../ico.qrc">
+            <normaloff>:/png/icons/minus.png</normaloff>:/png/icons/minus.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>16</width>
+            <height>16</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="close_btn">
+          <property name="minimumSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+	background-color:transparent;
+	border:0;
+	padding:5px;
+}
+QPushButton:hover{
+	background-color:rgb(235, 59, 90);
+	color: rgb(255, 255, 255);
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../ico.qrc">
+            <normaloff>:/png/icons/close.png</normaloff>:/png/icons/close.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>26</width>
+            <height>26</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QWidget" name="container" native="true">
+     <property name="styleSheet">
+      <string notr="true">QWidget#container{
+	background-color:rgb(23, 21, 59);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QGroupBox" name="groupBox">
+        <property name="styleSheet">
+         <string notr="true">QGroupBox{
+	color: rgb(53, 46, 126);
+	border:1px solid rgb(53, 46, 126);
+	border-radius:5px;
+}</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="geometry">
+          <rect>
+           <x>650</x>
+           <y>8</y>
+           <width>136</width>
+           <height>156</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QGroupBox{
+	color: rgb(255, 255, 255);
+	border:1px solid rgb(53, 46, 126);
+	border-radius:5px;
+}</string>
+         </property>
+         <property name="title">
+          <string/>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
+         </property>
+         <widget class="QPushButton" name="update_up_std_btn">
+          <property name="geometry">
+           <rect>
+            <x>12</x>
+            <y>10</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="sizeIncrement">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>Upload Photo</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+  background-color: rgb(52, 168, 83);
+  color: rgb(255, 255, 255);
+  border-radius: 3px;
+}
+QPushButton::hover{
+	background-color:rgb(63, 204, 101);
+}
+QPushButton::pressed{
+	padding-left:2px;
+	padding-top: 1px;
+	background-color: rgb(52, 168, 83);
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../ico.qrc">
+            <normaloff>:/png/icons/upload.png</normaloff>:/png/icons/upload.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>10</width>
+            <height>10</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="update_delete_std_btn">
+          <property name="geometry">
+           <rect>
+            <x>105</x>
+            <y>10</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>Delete Photo</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+  background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(179, 55, 113, 255), stop:1 rgba(219, 78, 117, 255));
+  color: rgb(255, 255, 255);
+  border-radius: 3px;
+}
+QPushButton::hover{
+	background-color:rgb(255, 89, 144);
+}
+QPushButton::pressed{
+	padding-left:2px;
+	padding-top: 1px;
+	background-color: rgb(220, 69, 134);
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../ico.qrc">
+            <normaloff>:/png/icons/close.png</normaloff>:/png/icons/close.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>16</width>
+            <height>16</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QLabel" name="update_default_photo">
+          <property name="geometry">
+           <rect>
+            <x>44</x>
+            <y>54</y>
+            <width>51</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="../ico.qrc">:/png/icons/no-photo.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="update_photo_label">
+          <property name="geometry">
+           <rect>
+            <x>8</x>
+            <y>7</y>
+            <width>121</width>
+            <height>141</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <zorder>update_default_photo</zorder>
+         <zorder>update_photo_label</zorder>
+         <zorder>update_delete_std_btn</zorder>
+         <zorder>update_up_std_btn</zorder>
+        </widget>
+        <widget class="QWidget" name="line" native="true">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>177</y>
+           <width>756</width>
+           <height>1</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(54, 44, 130);</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>13</x>
+           <y>290</y>
+           <width>771</width>
+           <height>65</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Address</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="update_address_lineEdit">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="placeholderText">
+               <string>XXX City, Algeria</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_10">
+            <item>
+             <widget class="QLabel" name="label_11">
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Current City</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="update_city_lineEdit">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="placeholderText">
+               <string>Ouled Djellal, Algeria</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>380</y>
+           <width>771</width>
+           <height>52</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QPushButton" name="update_student_btn">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	background-color: rgb(52, 43, 124);
+	color: rgb(203, 192, 222);
+	padding:10px;
+	height:30;
+	border:none;
+	border-radius:5px;
+}
+QPushButton::pressed{
+	background-color: rgb(65, 57, 156);
+}</string>
+            </property>
+            <property name="text">
+             <string> Update Student</string>
+            </property>
+            <property name="icon">
+             <iconset theme="QIcon::ThemeIcon::SyncSynchronizing"/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="update_clear_btn">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	background-color: rgb(52, 43, 124);
+	color: rgb(203, 192, 222);
+	padding:10px;
+	height:30;
+	border:none;
+	border-radius:5px;
+}
+QPushButton::pressed{
+	background-color: rgb(65, 57, 156);
+}</string>
+            </property>
+            <property name="text">
+             <string> Clear</string>
+            </property>
+            <property name="icon">
+             <iconset theme="view-restore"/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="update_cancel_btn">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	background-color: rgb(52, 43, 124);
+	color: rgb(203, 192, 222);
+	padding:10px;
+	height:30;
+	border:none;
+	border-radius:5px;
+}
+QPushButton::pressed{
+	background-color: rgb(65, 57, 156);
+}</string>
+            </property>
+            <property name="text">
+             <string>Cancel</string>
+            </property>
+            <property name="icon">
+             <iconset theme="edit-clear"/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>631</width>
+           <height>151</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <property name="spacing">
+               <number>6</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="label_2">
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="autoFillBackground">
+                 <bool>false</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="text">
+                 <string> First Name</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="update_first_name_lineEdit">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>35</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>35</height>
+                 </size>
+                </property>
+                <property name="placeholderText">
+                 <string>Type first name here </string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_5">
+              <item>
+               <widget class="QLabel" name="label_9">
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Last Name</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="update_last_name_lineEdit">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>35</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>35</height>
+                 </size>
+                </property>
+                <property name="placeholderText">
+                 <string>Type last name here </string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_9">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_8">
+              <item>
+               <widget class="QLabel" name="label_4">
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Phone Number</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="update_phone_lineEdit">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>35</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>35</height>
+                 </size>
+                </property>
+                <property name="placeholderText">
+                 <string>+213 00 00 00 00</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_12">
+              <item>
+               <widget class="QLabel" name="label_5">
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Email</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="update_email_lineEdit">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>35</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>35</height>
+                 </size>
+                </property>
+                <property name="placeholderText">
+                 <string>XXXX@mail.com</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>11</x>
+           <y>200</y>
+           <width>771</width>
+           <height>67</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_10">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <widget class="QLabel" name="label_6">
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Select Gender</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="update_gender_comboBox">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QComboBox{
+	background-color: rgb(37, 30, 84);
+	color: rgb(134, 136, 223);
+	border: 1px solid rgb(44, 38, 100);
+	border-radius: 5px;
+	padding: 5px;
+	padding-left: 10px;
+	height:25px;
+}
+QComboBox:hover{
+	border: 1px solid rgb(52, 84, 153);
+}
+QComboBox::drop-down {
+	subcontrol-origin: padding;
+	subcontrol-position: top right;
+	width: 35px; 
+	border-left-width: 3px;
+	border-left-color: rgb(38, 33, 91);
+	border-left-style: solid;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;	
+	background-image: url(:/png/icons/arrow-down.png);
+	background-position: center;
+	background-repeat: no-reperat;
+ }
+QComboBox QAbstractItemView {
+	color: rgb(134, 136, 223);	
+	background-color: rgb(37, 30, 84);
+	padding: 10px;
+	selection-background-color: rgb(23, 21, 59); 
+	margin-top:3px;
+	border-radius: 5px;
+}
+QComboBox::down-arrow { 	
+	image: url(:/png/icons/arrow-down.png);
+	width:25px;
+	height:25px;
+}</string>
+              </property>
+              <property name="editable">
+               <bool>false</bool>
+              </property>
+              <item>
+               <property name="text">
+                <string>_____ Select _____</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Male</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Female</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QLabel" name="label_7">
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Select Class</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="update_class_comboBox">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QComboBox{
+	background-color: rgb(37, 30, 84);
+	color: rgb(134, 136, 223);
+	border: 1px solid rgb(44, 38, 100);
+	border-radius: 5px;
+	padding: 5px;
+	padding-left: 10px;
+	height:25px;
+}
+QComboBox:hover{
+	border: 1px solid rgb(52, 84, 153);
+}
+QComboBox::drop-down {
+	subcontrol-origin: padding;
+	subcontrol-position: top right;
+	width: 35px; 
+	border-left-width: 3px;
+	border-left-color: rgb(38, 33, 91);
+	border-left-style: solid;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;	
+	background-image: url(:/png/icons/arrow-down.png);
+	background-position: center;
+	background-repeat: no-reperat;
+ }
+QComboBox QAbstractItemView {
+	color: rgb(134, 136, 223);	
+	background-color: rgb(37, 30, 84);
+	padding: 10px;
+	selection-background-color: rgb(23, 21, 59); 
+	margin-top:3px;
+	border-radius: 5px;
+}
+QComboBox::down-arrow { 	
+	image: url(:/png/icons/arrow-down.png);
+	width:25px;
+	height:25px;
+}</string>
+              </property>
+              <item>
+               <property name="text">
+                <string>_____ Select _____</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Grade 01</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Grade 02</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Grade 03</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Grade 04</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QLabel" name="label_12">
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Date Of Birth</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDateEdit" name="update_birth_dateEdit">
+              <property name="acceptDrops">
+               <bool>false</bool>
+              </property>
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QDateEdit{
+	background-color: rgb(37, 30, 84);
+	color: rgb(134, 136, 223);
+	border-radius:6px;
+	padding-left:5px;
+	height:35px;
+	border:none;
+}
+QDateEdit::down-arrow {
+	image: url(:/png/icons/calendar.png);
+	width:20px;
+	height:20px;
+	margin-right:10px;
+}
+QDateEdit::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 30px;
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}
+#calendarWidget QWidget{
+	alternate-background-color: rgb(52, 168, 83);
+}
+#qt_calendar_navigationbar{
+	background-color: rgb(16, 14, 40);
+}
+#qt_calendar_prevmonth, #qt_calendar_nextmonth{
+	border:none;
+	qproperty-icon:none;
+	min-width:13px;
+	max-width:13px;
+	min-height:13px;
+	min-height:13px;
+	border-radius:5px;
+	background-color: transparent;
+	padding:5px;
+}
+#qt_calendar_prevmonth{
+	margin-right:5px;
+	image: url(:/newPrefix/icons/left-arrow.png);
+}
+#qt_calendar_nextmonth{
+	margin-left:5px;	
+	image: url(:/newPrefix/icons/right-arrow.png);
+}
+#qt_calendar_prevmonth:hover, 
+#qt_calendar_nextmonth:hover
+{
+	background-color: rgb(37, 30, 84);
+}
+#qt_calendar_prevmonth:pressed, 
+#qt_calendar_nextmonth:pressed
+{
+	background-color: rgb(37, 30, 84);
+}
+#qt_calendar_yearbutton{
+	color: rgb(203, 192, 222);
+	width: 50px;
+	margin:5px;
+	border-radius:5px;
+	font-size:13px;
+	padding:0 10px;
+}
+#qt_calendar_monthbutton{
+	color: rgb(203, 192, 222);
+	margin:5px 5px;
+	border-radius:5px;
+	font-size:14px;
+	padding:0 5px;
+}
+#qt_calendar_yearbutton:hover,
+#qt_calendar_monthbutton:hover
+{
+	background-color: rgb(37, 30, 84);
+}
+#qt_calendar_yearbutton:pressed,
+#qt_calendar_monthbutton:pressed
+{
+	background-color: rgb(193, 104, 128);
+}
+#qt_calendar_yearedit{
+	min-width:90px;
+	color: rgb(203, 192, 222);
+	background: transparent;
+	font-size:14px;
+}
+#calendarWidget QToolButton QMenu{
+	background-color: rgb(37, 30, 84);
+}
+#calendarWidget QToolButton QMenu:item{
+	padding:5px;
+}
+#calendarWidget QToolButton QMenu::item:selected:enabled{
+	background-color: rgb(255, 255, 0);
+}
+#calendarWidget QToolButton::menu-indicator{
+	nosubcontrol-origin:margin;
+	subcontrol-position:right center;
+	margin-top:10px;
+	width:20px;
+}
+/* header row */
+QCalendarWidget QWidget { alternate-background-color:rgb(52, 43, 124); }
+QCalendarWidget QAbstractItemView:enabled
+{
+	font-size:14px;
+	color: rgb(222, 222, 222);
+	background-color: rgb(23, 21, 59);
+	selection-background-color: rgb(64, 64, 64);
+	selection-color: rgb(0, 255, 0);
+}</string>
+              </property>
+              <property name="wrapping">
+               <bool>false</bool>
+              </property>
+              <property name="frame">
+               <bool>true</bool>
+              </property>
+              <property name="buttonSymbols">
+               <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+              </property>
+              <property name="accelerated">
+               <bool>false</bool>
+              </property>
+              <property name="correctionMode">
+               <enum>QAbstractSpinBox::CorrectionMode::CorrectToNearestValue</enum>
+              </property>
+              <property name="showGroupSeparator" stdset="0">
+               <bool>false</bool>
+              </property>
+              <property name="dateTime">
+               <datetime>
+                <hour>0</hour>
+                <minute>0</minute>
+                <second>0</second>
+                <year>1999</year>
+                <month>12</month>
+                <day>26</day>
+               </datetime>
+              </property>
+              <property name="maximumDateTime">
+               <datetime>
+                <hour>23</hour>
+                <minute>59</minute>
+                <second>59</second>
+                <year>9999</year>
+                <month>12</month>
+                <day>29</day>
+               </datetime>
+              </property>
+              <property name="minimumDate">
+               <date>
+                <year>1970</year>
+                <month>9</month>
+                <day>1</day>
+               </date>
+              </property>
+              <property name="currentSection">
+               <enum>QDateTimeEdit::Section::YearSection</enum>
+              </property>
+              <property name="displayFormat">
+               <string>yyyy-MM-dd</string>
+              </property>
+              <property name="calendarPopup">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../ico.qrc"/>
+ </resources>
+ <connections/>
+</ui>

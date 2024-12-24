@@ -1,0 +1,71 @@
+{
+    "fade": [
+        {
+            "active": true,
+            "duration": 1000,
+            "easingCurve": "OutBack"
+        }
+    ],
+    "slide": [
+        {
+            "active": true,
+            "duration": 500,
+            "direction": "right",
+            "easingCurve": "OutBack"
+        },
+        {
+            "active": true,
+            "duration": 500,
+            "direction": "left",
+            "easingCurve": "OutBack"
+        },
+        {
+            "active": true,
+            "duration": 500,
+            "direction": "top",
+            "easingCurve": "OutBack"
+        },
+        {
+            "active": true,
+            "duration": 500,
+            "direction": "bottom",
+            "easingCurve": "OutBack"
+        }
+    ],
+    "bounce": [
+        {
+            "active": true,
+            "duration": 1000,
+            "easingCurve": "OutBounce"
+        }
+    ],
+    "zoom": [
+        {
+            "active": true,
+            "duration": 2000,
+            "easingCurve": "OutQuad"
+        }
+    ],
+    "rotate": [
+        {
+            "active": true,
+            "duration": 800,
+            "easingCurve": "OutQuad"
+        }
+    ],
+    "scale_fade": [
+        {
+            "active": true,
+            "duration": 1000,
+            "easingCurve": "OutBack"
+        }
+    ],
+    "swipe": [
+        {
+            "active": true,
+            "duration": 700,
+            "direction": "horizontal",
+            "easingCurve": "OutBack"
+        }
+    ]
+}
