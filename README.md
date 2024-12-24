@@ -38,8 +38,75 @@ python -m venv Your_env
 Your_env\Scripts\activate
 pip3 install -r requirements.txt
 ```
+## Import/Export Database Using MySQL Workbench :
 
-MIT License
+- Download the latest version of MySQL Workbench from official website : [HERE](https://dev.mysql.com/downloads/workbench/)
+- Under Server Administration on the Home window select the server instance you want to restore database to (Create New Server Instance if doing it first time).
+- Click on Manage Import/Export.
+- Click on Data Import/Restore on the left side of the screen.
+- Select Import from Self-Contained File radio button (right side of screen).
+- Select the path of .sql.
+- Click Start Import button at the right bottom corner of window.
+
+![2024-12-24_193958](https://github.com/user-attachments/assets/c14e1916-92a3-4e4f-89a9-0383f3a9f30b)
+
+## Database instruction :
+
+### Table: add_students :
+```sh
+Columns:
+id_addstudent int AI PK 
+first_name varchar(45) 
+last_name varchar(45) 
+date_birth date 
+age int 
+gender varchar(45) 
+class varchar(45) 
+phone int 
+email varchar(45) 
+address varchar(45) 
+city varchar(45) 
+photo_id
+```
+### Table: registration :
+```sh
+registration_id int AI PK 
+username varchar(45) 
+password varchar(45) 
+email varchar(45)
+```
+
+## Control flags for animation activation :
+from qdialog_utils.py Set to True to enable effect, False to disable.
+
+```sh
+    apply_slide = False
+    apply_bounce = False
+    apply_zoom = True
+    apply_fade = False
+    apply_scale_fade = False
+```
+![2024-12-23_115300](https://github.com/user-attachments/assets/2173924a-9187-4000-b44e-2a9f0bc9f5d3)
+
+## Example To switch between Animation Effects From CustomQDialog.py :
+
+```sh
+    def open_update_student(self):
+        if hasattr(self, 'update_student') and self.update_student.isVisible():
+            self.update_student.raise_()  # Bring the existing dialog to the front
+        else:
+            # Pass the dialog class directly; no need for `partial`
+            animation_dialog_Window(
+                self.Mainproject.main_window,
+                lambda parent: update_student.UpdateStudent(self.row_number, self.row_data, parent)
+            )
+
+            # Notify MainProject to reload data after deletion
+            self.Mainproject.reload_studentstable_data()
+```
+Replace [animation_dialog_Window] with [slide_dialog_Window] or [slide_out_dialog_Window]
+
+## MIT License :
 
 Copyright (c) [2024] [LAROUSSI BOULANOUAR]
 
