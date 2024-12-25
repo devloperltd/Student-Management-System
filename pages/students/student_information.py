@@ -30,6 +30,9 @@ class StudentInfo:
         # Load student information to QTableWidget initially (show all)
         self.load_students_info()
 
+        # Connect the search box textChanged signal to the filter function
+        self.ui.students_searchBox.textChanged.connect(self.filter_students_by_search)
+
         # Connect comboboxes to filter method
         self.ui.filter_class_comboBox.currentTextChanged.connect(self.reload_studentstable_data)
         self.ui.filter_gender_comboBox.currentTextChanged.connect(self.reload_studentstable_data)
@@ -84,6 +87,7 @@ class StudentInfo:
             if db:
                 db.close()
 
+    # Opens add student dialog with animations
     def open_add_student(self):
         """
         Opens the AddStudent dialog with animations.
@@ -99,6 +103,28 @@ class StudentInfo:
     # Reload student information In QTableWidget
     def reload_studentstable_data(self):
         self.load_students_info()
+
+    # Search Box by Filter rows in QTableWidget
+    def filter_students_by_search(self, text):
+        """
+        Filter students in the students_table based on the first word typed in the search box.
+        """
+        # Get the number of rows in the table
+        row_count = self.ui.students_table.rowCount()
+
+        for row in range(row_count):
+            # Assume no match initially
+            match = False
+
+            # Check each column in the row for a match with the start of the cell content
+            for column in range(self.ui.students_table.columnCount()):
+                item = self.ui.students_table.item(row, column)
+                if item and item.text().lower().startswith(text.lower()):
+                    match = True
+                    break
+
+            # Hide the row if no match, show otherwise
+            self.ui.students_table.setRowHidden(row, not match)
 
     # Load and filter student information to QTableWidget
     def load_students_info(self):

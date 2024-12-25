@@ -117,6 +117,15 @@ class dashboard_page:
         total_male = int(self.ui.total_male_label.text())
         total_female = int(self.ui.total_female_label.text())
 
+        # Handle case where there are no students
+        if total_students == 0:
+            chart = QChart()
+            chart.setTitle("No Data Available")
+            chart_view = self.ui.students_piechart  # This is the promoted QChartView
+            chart_view.setChart(chart)
+            chart_view.setRenderHint(QPainter.Antialiasing)
+            return
+
         # Donut chart data
         labels = ['Total Students', 'Male Students', 'Female Students']
         sizes = [total_students, total_male, total_female]
@@ -132,7 +141,7 @@ class dashboard_page:
             slice.setLabelVisible(True)
 
             # Add percentage labels
-            percentage = (size / total_students) * 100
+            percentage = (size / total_students) * 100 if total_students > 0 else 0
             slice.setLabel(f"{label}: {percentage:.1f}%")  # Format the label with percentage
 
             if explode_value > 0:  # Check if the slice should be exploded
@@ -156,6 +165,7 @@ class dashboard_page:
         # Optionally, you can make the chart responsive by setting a layout
         chart_view.setMinimumHeight(300)  # Adjust as needed
         chart_view.setMinimumWidth(300)  # Adjust as needed
+
 
     # QChartView Students Bar chart in the QGraphicsView
     def show_bar_chart(self):

@@ -86,7 +86,7 @@ Main Nav QPushButton  */
 /* ////////////////////////////////////////////////////////
 SearchBox QLineEdit  */
 
-#searchBox {
+#students_searchBox {
 	image: url(:/png/icons/loupe.png);
 	image-position:right;
 	border:1px solid rgb(58, 52, 139);
@@ -95,7 +95,7 @@ SearchBox QLineEdit  */
 	color: rgb(168, 152, 247);
 	border-radius:5px;
 }
-#searchBox:focus{
+#students_searchBox:focus{
     border: 1px solid #006080;
 }
 
@@ -1805,7 +1805,7 @@ QPushButton::checked{
               </sizepolicy>
              </property>
              <property name="currentIndex">
-              <number>13</number>
+              <number>2</number>
              </property>
              <widget class="QWidget" name="Dashboard_0">
               <layout class="QVBoxLayout" name="verticalLayout_22">
@@ -3289,7 +3289,7 @@ QComboBox::down-arrow {
                    </spacer>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="searchBox">
+                   <widget class="QLineEdit" name="students_searchBox">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                       <horstretch>0</horstretch>

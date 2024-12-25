@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_guiuwsgIh.ui'
+## Form generated from reading UI file 'main_guisQiONS.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.1
 ##
@@ -95,7 +95,7 @@ class Ui_MainWindow(object):
 "/* ////////////////////////////////////////////////////////\n"
 "SearchBox QLineEdit  */\n"
 "\n"
-"#searchBox {\n"
+"#students_searchBox {\n"
 "	image: url(:/png/icons/loupe.png);\n"
 "	image-position:right;\n"
 "	border:1px solid rgb(58, 52, 139);\n"
@@ -104,7 +104,7 @@ class Ui_MainWindow(object):
 "	color: rgb(168, 152, 247);\n"
 "	border-radius:5px;\n"
 "}\n"
-"#searchBox:focus{\n"
+"#students_searchBox:focus{\n"
 "    border: 1px solid #006080;\n"
 "}\n"
 "\n"
@@ -125,9 +125,9 @@ class Ui_MainWindow(object):
 "	color: rgb(134, 136, 223);\n"
 "	height:35px;\n"
 "	max-width: 30px;\n"
-"	padding: 3px;\n"
-"	border-top-l"
-                        "eft-radius: 7px;\n"
+"	padding: 3px;"
+                        "\n"
+"	border-top-left-radius: 7px;\n"
 "    border-top-right-radius: 7px;\n"
 "}\n"
 "QTableWidget::item{\n"
@@ -163,10 +163,10 @@ class Ui_MainWindow(object):
 "	border-top-right-radius: 4px;\n"
 "    border-bottom-right-radius: 4px;\n"
 "    subcontrol-position: right;\n"
-"    subcontrol-origin: margin;\n"
+"    subcontrol-origin: mar"
+                        "gin;\n"
 "}\n"
-"QSc"
-                        "rollBar::sub-line:horizontal {\n"
+"QScrollBar::sub-line:horizontal {\n"
 "    border: none;\n"
 "    background: rgb(71, 78, 147);\n"
 "    width: 20px;\n"
@@ -201,9 +201,9 @@ class Ui_MainWindow(object):
 "     height: 20px;\n"
 "	border-bottom-left-radius: 4px;\n"
 "    border-bottom-right-radius: 4px;\n"
-"     subcontrol-position: bottom;\n"
-"     subco"
-                        "ntrol-origin: margin;\n"
+"     subcontrol-position: bott"
+                        "om;\n"
+"     subcontrol-origin: margin;\n"
 " }\n"
 " QScrollBar::sub-line:vertical {\n"
 "	border: none;\n"
@@ -1673,15 +1673,15 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_10.addItem(self.horizontalSpacer_3)
 
-        self.searchBox = QLineEdit(self.frame_2)
-        self.searchBox.setObjectName(u"searchBox")
-        sizePolicy4.setHeightForWidth(self.searchBox.sizePolicy().hasHeightForWidth())
-        self.searchBox.setSizePolicy(sizePolicy4)
-        self.searchBox.setMaximumSize(QSize(200, 16777215))
-        self.searchBox.setFont(font3)
-        self.searchBox.setStyleSheet(u"")
+        self.students_searchBox = QLineEdit(self.frame_2)
+        self.students_searchBox.setObjectName(u"students_searchBox")
+        sizePolicy4.setHeightForWidth(self.students_searchBox.sizePolicy().hasHeightForWidth())
+        self.students_searchBox.setSizePolicy(sizePolicy4)
+        self.students_searchBox.setMaximumSize(QSize(200, 16777215))
+        self.students_searchBox.setFont(font3)
+        self.students_searchBox.setStyleSheet(u"")
 
-        self.horizontalLayout_10.addWidget(self.searchBox)
+        self.horizontalLayout_10.addWidget(self.students_searchBox)
 
 
         self.verticalLayout_16.addWidget(self.frame_2)
@@ -1929,7 +1929,7 @@ class Ui_MainWindow(object):
         self.toggle_btn.toggled.connect(self.expand_sidBar.setHidden)
         self.toggle_btn.toggled.connect(self.left_sideBar.setVisible)
 
-        self.stackedWidget.setCurrentIndex(13)
+        self.stackedWidget.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -2028,7 +2028,7 @@ class Ui_MainWindow(object):
         self.filter_class_comboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"Grade 03", None))
         self.filter_class_comboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Grade 04", None))
 
-        self.searchBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Search ...", None))
+        self.students_searchBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Search ...", None))
         ___qtablewidgetitem = self.students_table.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"ID", None));
         ___qtablewidgetitem1 = self.students_table.horizontalHeaderItem(1)
