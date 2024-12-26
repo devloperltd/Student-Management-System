@@ -11,6 +11,10 @@ is designed to record, analyze, and manage information in a school. These system
 - 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 : [HERE](https://t.me/UncleAnonymous)
 - 𝗪𝗘𝗕𝗦𝗜𝗧𝗘 : [HERE](https://laroussigsm.net/)
 
+## Watch Finale Project Video :
+
+[![Watch the video](images/video_thumbnail.png)](https://www.facebook.com/share/v/1DFeQda4vk/)
+
 # Features :
 
 - Animating Pyside6 widgets with QPropertyAnimation.
